@@ -30,9 +30,16 @@ button{
     font-size:1.2rem;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(32, 30, 30);
+    background:linear-gradient( rgb(32, 30, 30),blue,black);
     color:aliceblue;
     border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 4px 5px 6px 1px  rgb(68, 104, 111);
+}
+button:hover{
+    filter: brightness(1.2);
+    transform: scale(1.2);
+
 }
 tr td:nth-child(2){
     text-align: center;
