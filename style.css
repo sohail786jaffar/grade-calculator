@@ -14,17 +14,25 @@ input{
     border: 1px solid  rgb(63, 60, 63);
     color: inherit;
     padding: 5px;
+    border: none;
+    outline: none;
+}
+::placeholder{
+    color: inherit;
 }
 table{
+    padding: 5px;
+    border-radius: 10px;
     box-shadow: 2px 2px 20px 1px beige;
+    background: radial-gradient(rgba(0, 0, 255, 0.436),rgba(255, 0, 0, 0.413),rgba(0, 0, 0, 0.498));
+    
 }
-table,th,tr,td{
+th,tr,td{
     width: 70%;
-    border-collapse: collapse;
+    border-radius: 30px;
     border: 1px solid rgb(63, 60, 63);
     padding: 10px;
     color: aliceblue;
-
 }
 thead{
     background-color: rgb(13, 204, 246);
