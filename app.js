@@ -1,38 +1,35 @@
-function grade (percentage){
-    if (percentage>=90)
-{
-    alert("your grade is A++")
+function gradecal(percentage) {
+    let grade;
+    if (percentage >= 90) {
+        grade = "A+";
+    } else if (percentage >= 80) {
+        grade = "A";
+    } else if (percentage >= 70) {
+        grade = "B";
+    } else if (percentage >= 60) {
+        grade = "C";
+    } else if (percentage >= 50) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+    return grade;
 }
-else if (percentage>=80)
-{
-    alert("your grade is A+")
+
+function calculateGrade() {
+    let english = parseInt(document.getElementById("english").value) || 0;                   
+    let math = parseInt(document.getElementById("maths").value) || 0;
+    let urdu = parseInt(document.getElementById("urdu").value) || 0;
+    let computer = parseInt(document.getElementById("computer").value) || 0;
+    let physics = parseInt(document.getElementById("physics").value) || 0;
+    if (math>100 ||english>100 ||urdu>100 ||computer>100 ||physics>100){
+        alert("please enter marks between 0 to 100")
+    }
+    else{
+    let obtainMarks = english + math + urdu + computer + physics;
+    let percentage = (obtainMarks / 500) * 100;
+    document.getElementById("totalMarks").innerText = obtainMarks;
+    document.getElementById("percentage").innerText = percentage;
+    document.getElementById("Grade").innerText = gradecal(percentage);
+    }
 }
-else if (percentage>=70)
-{
-    alert("your grade is A")
-}
-else if (percentage>=60)
-{
-    alert("your grade is B")
-}
-else if (percentage>=50)
-{
-    alert("your grade is C")
-}
-else if (percentage>=40)
-{
-    alert("your grade is D")
-}
-else{
-    alert("your grade is F")
-}
-}
-let English=parseInt(prompt("enter your marks in English: ") )                   
-let Math=parseInt(prompt("enter your marks in Math: "))
-let Urdu=parseInt(prompt("enter your marks in Urdu: "))
-let Computer=parseInt(prompt("enter your marks in Computer: "))
-let physics=parseInt(prompt("enter your marks in Physics: "))
-let obtain_marks=English+Computer+Urdu+physics+Math
-alert("you total obtain marks is: " + obtain_marks)
-let percentage=(obtain_marks/500)*100
-alert(grade(percentage))
